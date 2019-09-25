@@ -1,12 +1,12 @@
 <li [ngClass]="{'list-group-item' : true,
-				'list-group-item-success' : loveIts > 0,
-                'list-group-item-danger' : loveIts < 0 }">
+				'list-group-item-success' : post_1.loveIts > 0,
+                'list-group-item-danger' : post_1.loveIts < 0 }">
     <p style="margin-bottom:30px">
-        <span style="float: left; font-size:xx-large; font-weight: bold"> {{title}}</span>
-        <span style="float: right; font-size:large" >le {{created_at| date: 'EEEE dd MMMM yyyy'}} à {{created_at| date: 'HH:mm:ss'}}</span>
+        <span style="float: left; font-size:xx-large; font-weight: bold"> {{post_1.title}}</span>
+        <span style="float: right; font-size:large" >le {{post_1.createdAt | date: 'EEEE dd MMMM yyyy'}} à {{post_1.createdAt | date: 'HH:mm:ss'}}</span>
     </p>
     <p style="margin-bottom:20px; clear: both">
-        {{content}}
+        {{post_1.content}}
     </p>
     <button
         class="btn btn-success"
